@@ -23,3 +23,7 @@ RUN pip install -r requirements.txt
 # port where the Django app runs  
 EXPOSE 8000  
 # start server
+CMD python manage.py makemigrations
+CMD python manage.py migrate --run-syncdb
+CMD python manage.py createsuperuser
+CMD python manage.py runserver
