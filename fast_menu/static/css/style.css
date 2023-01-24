@@ -1,0 +1,23 @@
+.dish {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  flex-grow: 8;
+}
+
+.price {
+  flex-grow: 2;
+  text-align: right;
+  padding:0 20px 20px 0;
+}
+
+.group {
+  text-align: center;
+}
+
+body {
+  font-family: Verdana;
+  color: black;
+}
