@@ -29,5 +29,5 @@ CMD python manage.py migrate --run-syncdb
 RUN echo "make sync"
 CMD python manage.py createsuperuser
 RUN echo "make super user"
-CMD python manage.py runserver
+CMD python manage.py runserver 0.0.0.0:8000
 RUN echo "done"
