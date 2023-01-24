@@ -24,6 +24,10 @@ RUN pip install -r requirements.txt
 EXPOSE 8000  
 # start server
 CMD python manage.py makemigrations
+RUN echo "make migration"
 CMD python manage.py migrate --run-syncdb
+RUN echo "make sync"
 CMD python manage.py createsuperuser
+RUN echo "make super user"
 CMD python manage.py runserver
+RUN echo "done"
