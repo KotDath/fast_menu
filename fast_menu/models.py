@@ -27,12 +27,17 @@ class Dish(models.Model):
 
 
 class Config(models.Model):
+    title = models.CharField(max_length=50, help_text='title')
+    page_name = models.CharField(max_length=50, help_text='page name')
     header_font = models.CharField(max_length=50, help_text='header font')
     group_font = models.CharField(max_length=50, help_text='group font')
     dish_font = models.CharField(max_length=50, help_text='dish font')
+    description_font = models.CharField(max_length=50, help_text='description font')
     header_color = models.CharField(max_length=50, help_text='header color')
     group_color = models.CharField(max_length=50, help_text='group color')
     dish_color = models.CharField(max_length=50, help_text='dish color')
+    description_color = models.CharField(max_length=50, help_text='description color')
     header_size = models.IntegerField()
     group_size = models.IntegerField()
     dish_size = models.IntegerField()
+    description_size = models.IntegerField()

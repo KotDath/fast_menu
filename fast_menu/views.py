@@ -13,8 +13,6 @@ def main(request):
         if len(dishes) > 0:
             groups[category.category_name] = dishes
     context = {
-        "title": 'Краснодар',
-        "page_name": 'Dish Menu bar',
         "groups": groups,
         "config": config,
     }

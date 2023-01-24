@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}</title>
+    <title>{{config.title}}</title>
 
     <link rel="stylesheet" href='{% static "css/style.css" %}'/>
     <link rel="stylesheet"
@@ -15,10 +15,12 @@
           href="https://fonts.googleapis.com/css?family={{config.group_font}}">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family={{config.dish_font}}">
+     <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family={{config.description_font}}">
 
 </head>
 <body>
-<h1 style="text-align: center; color: {{config.header_color}}; font-family: '{{config.header_font}}', serif; font-size: {{config.header_size}}px;">{{page_name}}</h1>
+<h1 style="text-align: center; color: {{config.header_color}}; font-family: '{{config.header_font}}', serif; font-size: {{config.header_size}}px;">{{config.page_name}}</h1>
 <ul>
     {% for key, value in groups.items %}
         <div class="group" style="color: {{config.group_color}}; font-family: '{{config.group_font}}', serif; font-size: {{config.group_size}}px;"><h2>{{key}}</h2></div>
@@ -32,6 +34,8 @@
                     {{dish.item_price}}
                 </div>
             </div>
+
+            <div class="description" style="color: {{config.description_color}}; font-family: '{{config.description_font}}', serif; font-size: {{config.description_size}}px;">{{dish.item_description}}</div>
         </li>
 
         {% endfor %}

@@ -7,6 +7,10 @@
   flex-grow: 8;
 }
 
+hr {
+  width: 100%;
+}
+
 .price {
   flex-grow: 2;
   text-align: right;
@@ -14,7 +18,12 @@
 }
 
 .group {
+  flex-grow: 1;
   text-align: center;
+}
+
+.description {
+  padding: 0px 20px 5px;
 }
 
 body {
