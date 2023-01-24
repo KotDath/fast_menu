@@ -21,7 +21,7 @@ COPY . $DockerHOME
 # run this command to install all dependencies  
 RUN pip install -r requirements.txt  
 # port where the Django app runs  
-EXPOSE 8000
+EXPOSE 8002
 # start server
 CMD python manage.py makemigrations
 RUN echo "make migration"
@@ -29,5 +29,5 @@ CMD python manage.py migrate --run-syncdb
 RUN echo "make sync"
 CMD python manage.py createsuperuser
 RUN echo "make super user"
-CMD python manage.py runserver 0.0.0.0:8000
+CMD python manage.py runserver 0.0.0.0:8002
 RUN echo "done"
